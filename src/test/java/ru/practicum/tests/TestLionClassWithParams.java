@@ -2,7 +2,6 @@ package ru.practicum.tests;
 
 import com.example.Feline;
 import com.example.Lion;
-import com.example.Predator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -28,8 +27,8 @@ public class TestLionClassWithParams {
     }
     @Test
     public void testLionDoesHaveManeReturnsCorrectBooleanValue() throws Exception {
-        Predator feline = new Feline();
-        Lion lion = new Lion(feline, lionSex);
+        Feline feline = new Feline();
+        Lion lion = new Lion(lionSex, feline);
         String errorMessage = Constants.LION_MALE.equals(lionSex) ? "Самец льва должен иметь гриву" : "У самки льва гривы нет";
         assertEquals(errorMessage, hasMane, lion.doesHaveMane());
     }

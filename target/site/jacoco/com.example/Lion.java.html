@@ -3,11 +3,11 @@
 import java.util.List;
 
 public class Lion {
-    private final Predator predator;
+    private final Feline feline;
     boolean hasMane;
 
-<span class="fc" id="L9">    public Lion(Predator predator, String sex) throws Exception {</span>
-<span class="fc" id="L10">        this.predator = predator;</span>
+<span class="fc" id="L9">    public Lion(String sex, Feline feline) throws Exception {</span>
+<span class="fc" id="L10">        this.feline = feline;</span>
 <span class="fc bfc" id="L11" title="All 2 branches covered.">        if (&quot;Самец&quot;.equals(sex)) {</span>
 <span class="fc" id="L12">            hasMane = true;</span>
 <span class="fc bfc" id="L13" title="All 2 branches covered.">        } else if (&quot;Самка&quot;.equals(sex)) {</span>
@@ -18,7 +18,7 @@ public class Lion {
 <span class="fc" id="L18">    }</span>
 
     public int getKittens() {
-<span class="fc" id="L21">        return ((Feline)predator).getKittens();</span>
+<span class="fc" id="L21">        return feline.getKittens();</span>
     }
 
     public boolean doesHaveMane() {
@@ -26,7 +26,7 @@ public class Lion {
     }
 
     public List&lt;String&gt; getFood() throws Exception {
-<span class="fc" id="L29">        return ((Feline)predator).getFood(&quot;Хищник&quot;);</span>
+<span class="fc" id="L29">        return feline.getFood(&quot;Хищник&quot;);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
